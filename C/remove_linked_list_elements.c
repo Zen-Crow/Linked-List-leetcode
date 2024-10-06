@@ -1,11 +1,11 @@
-#include <cstddef>
+#include <stddef.h>  // NULL
+#include <stdlib.h>  // malloc
 
 
 struct ListNode {
     int val; 
     struct ListNode *next;
 };
-
 
 struct ListNode* removeElements(struct ListNode* head, int val) {
     struct ListNode* dummy = malloc(sizeof(struct ListNode));

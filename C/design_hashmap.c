@@ -6,7 +6,6 @@ typedef struct {
     int *bucket;
 } MyHashMap;
 
-
 MyHashMap* myHashMapCreate() {
     int count = 1000001;
     MyHashMap* obj = (MyHashMap*)malloc(sizeof(MyHashMap));

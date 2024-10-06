@@ -6,8 +6,7 @@ typedef struct {
     int *bucket;    
 } MyHashSet;
 
-
-bool myHashSetContains(MyHashSet* obj, int key);
+bool myHashSetContains(MyHashSet* obj, int key);  // first call
 
 MyHashSet* myHashSetCreate() {
     int count = 1000001;

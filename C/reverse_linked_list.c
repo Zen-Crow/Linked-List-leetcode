@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdlib.h>  // malloc
 #include <stdio.h>
 
 struct ListNode

@@ -7,7 +7,6 @@ struct ListNode {
     struct ListNode *next;
 };
 
-
 bool isPalindrome(struct ListNode* head) {
     struct ListNode *slow = head;
     struct ListNode *fast = head;

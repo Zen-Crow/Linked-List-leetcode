@@ -6,7 +6,6 @@ struct ListNode {
     struct ListNode *next;
 };
 
-
 struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
     int l1 = 0, l2 = 0;
     struct ListNode *a = headA, *b = headB;

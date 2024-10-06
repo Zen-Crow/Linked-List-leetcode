@@ -1,6 +1,5 @@
-#include <stdbool.h>
+#include <stdbool.h>  // bool
 #include <stdio.h>
-
 
 
 struct ListNode {
@@ -8,11 +7,12 @@ struct ListNode {
     struct ListNode *next;
 };
 
-
-bool hasCycle(struct ListNode *head) {
-    struct ListNode* slow = head;
-    struct ListNode* fast = head;
-    while (fast != NULL && fast->next != NULL) {
+bool hasCycle(struct ListNode *head)
+{
+    struct ListNode *slow = head;
+    struct ListNode *fast = head;
+    while (fast != NULL && fast->next != NULL)
+    {
         slow = slow->next;
         fast = fast->next->next;
         if (slow == fast) {
@@ -21,4 +21,3 @@ bool hasCycle(struct ListNode *head) {
     }
     return false;
 };
-
