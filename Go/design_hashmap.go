@@ -1,6 +1,5 @@
 package main
 
-
 type MyHashMap struct {
 	bucket []int
 }

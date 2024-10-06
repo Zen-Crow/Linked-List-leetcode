@@ -1,18 +1,16 @@
-package main 
-
+package main
 
 type ListNode struct {
-	Val int 
+	Val  int
 	Next *ListNode
 }
 
-
 func hasCycle(head *ListNode) bool {
-	slow := head 
-	fast := head 
+	slow := head
+	fast := head
 
 	for fast != nil && fast.Next != nil {
-		slow = slow.Next 
+		slow = slow.Next
 		fast = fast.Next.Next
 		if slow == fast {
 			return true
@@ -20,4 +18,3 @@ func hasCycle(head *ListNode) bool {
 	}
 	return false
 }
-

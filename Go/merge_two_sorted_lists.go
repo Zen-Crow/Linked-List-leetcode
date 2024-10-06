@@ -1,16 +1,20 @@
-package main 
+package main
 
 type ListNode struct {
-	Val int
+	Val  int
 	Next *ListNode
 }
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	dummy := &ListNode{}
-    tail := dummy
+	tail := dummy
 
-	if list1 == nil { return list2 }
-	if list2 == nil { return list1 }
+	if list1 == nil {
+		return list2
+	}
+	if list2 == nil {
+		return list1
+	}
 
 	for list1 != nil && list2 != nil {
 		if list1.Val < list2.Val {
@@ -22,7 +26,11 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 		}
 		tail = tail.Next
 	}
-	if list1 != nil { tail.Next = list1 }
-	if list2 != nil { tail.Next = list2 }
+	if list1 != nil {
+		tail.Next = list1
+	}
+	if list2 != nil {
+		tail.Next = list2
+	}
 	return dummy.Next
 }
